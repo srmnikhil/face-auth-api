@@ -6,6 +6,7 @@ It allows uploading selfies and reference images, compares them, and returns whe
 ---
 
 ## 🚀 Features
+- Upload **1 selfie + 4 images** for comparison.
 - Face detection and recognition using `face-api.js`.
 - Accepts multiple formats: **PNG, JPG, JPEG**.
 - RESTful API built with Express.js.
@@ -158,13 +159,4 @@ When deploying:
 - Deploy only the **dist/** folder and **models/** folder.
 - Ensure environment variable `PORT` is set, else defaults to `5000`.
 
-Example:
-```bash
-npm run build
-scp -r dist models user@server:/app
-```
-
 ---
-
-## 📜 License
-MIT License. Free to use and modify.
