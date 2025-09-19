@@ -73,6 +73,7 @@ npm start
 - `images` → 1–4 reference images to match against.
 
 #### Response
+### ✅ All images match with selfie
 ```json
       // If all images match with selfie
 {
@@ -84,12 +85,24 @@ npm start
             "distance": 0.332,
             "match": true
         },
-        {
-           // more comparisons
-        }
+ {
+      "pair": "Selfie - Image 2",
+      "distance": 0.401,
+      "match": true
+    },
+    {
+      "pair": "Selfie - Image 3",
+      "distance": 0.298,
+      "match": true
+    },
+    {
+      "pair": "Selfie - Image 4",
+      "distance": 0.354,
+      "match": true
+    }
     ]
 }
-      // If any image not match with selfie
+### ❌ One or more images do not match
 {
     "result": "Face not Verified",
     "message": "Selfie did not match with image(s): 4",
@@ -98,16 +111,22 @@ npm start
     ],
     "threshold": 0.55,
     "distances": [
+{
+      "pair": "Selfie - Image 1",
+      "distance": 0.332,
+      "match": true
+    },
          {
             "pair": "Selfie - Image 4",
             "distance": 0.6017,
             "match": false
-        },
+        }
 
-      // If face not detected in any image or selfie
+### ⚠️ Face not detected
 {
     "error": "Face not detected in selfie"
-            # OR
+}
+{
     "error": "Face not detected in image(s): 1"
 }
 ```
