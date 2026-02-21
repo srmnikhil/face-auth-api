@@ -1,4 +1,4 @@
-# Face Verification API
+# Face Verification
 
 A simple face verification API built with **Node.js**, **TypeScript**, and **face-api.js**.  
 It allows uploading selfies and reference images, compares them, and returns whether they match.
